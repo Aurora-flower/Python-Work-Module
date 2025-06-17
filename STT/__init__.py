@@ -1,5 +1,5 @@
 """
-Text To Speech 文本转语音技术
+Speech To Text 语音识别技术
 """
 
 
