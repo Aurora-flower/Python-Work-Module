@@ -1,7 +1,4 @@
 """
-Text To Speech 文本转语音技术
+文本转语音技术 - Text To Speech
 """
 
-
-def say():
-    print("Hello World")
