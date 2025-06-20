@@ -8,6 +8,6 @@
 """
 import TTS
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     TTS.say()
-    print('主程序运行中')
+    print("主程序运行中")

@@ -1,6 +1,7 @@
 """
 辅助处理
 """
+
 import time
 import datetime
 
@@ -20,7 +21,7 @@ def switch(*arg, key=""):
     return method()
 
 
-def get_dict(d, key, default=None):
+def dict_value(d, key, default=None):
     """
     获取字典中的值，如果 key 不存在，返回 default 值
     """
@@ -50,11 +51,15 @@ def replace_in_range(s, start_index, tail_index, new_str):
         raise ValueError("Invalid start or tail index.")
 
     # 将字符串分成三部分：前半部分、替换部分、后半部分
-    new_s = s[:start_index] + new_str + s[tail_index + 1:]
+    new_s = s[:start_index] + new_str + s[tail_index + 1 :]
     return new_s
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     imag = get_time(time.time().imag)
     # now = get_time()
-    print(time.localtime().tm_zone, imag, time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+    print(
+        time.localtime().tm_zone,
+        imag,
+        time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+    )

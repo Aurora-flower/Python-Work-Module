@@ -1,13 +1,11 @@
 """
 用于做路径相关的处理，如删除、移动等
 """
+
 import os
 from pathlib import Path
 
-suffix = {
-    "json": [".json", ".prefab", ".fire"],
-    "js": ".js"
-}
+suffix = {"json": [".json", ".prefab", ".fire"], "js": ".js"}
 
 
 def get_path_ext(file_path):
@@ -36,9 +34,11 @@ def replace_path_sep(path):
     if sep == win_sep:
         path = path.replace(mac_sep, sep)
     elif sep == mac_sep:
-        path = (path.replace(win_sep, sep).replace("//", mac_sep)
-                # 为 mac 路径做的处理
-                .replace(" ", f"{win_sep} "))
+        path = (
+            path.replace(win_sep, sep).replace("//", mac_sep)
+            # 为 mac 路径做的处理
+            .replace(" ", f"{win_sep} ")
+        )
     return path
 
 

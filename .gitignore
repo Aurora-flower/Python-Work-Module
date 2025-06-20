@@ -1,4 +1,7 @@
 backup
-.DS_Store
 .idea/
 __pycache__/
+test/
+work/
+
+.DS_Store
